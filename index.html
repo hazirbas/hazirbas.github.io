@@ -1,66 +1,558 @@
----
-layout: page
-published: true
----
-<b>News</b>
-<ul>
-<li> Research Scientist at <a href="https://ai.meta.com" target="_blank">Meta AI</a> since
-	<span class="right"><font color="#848482"><em>Aug</em> 03, 2020</font></span>
-</li>
-<li> Joined <a href="https://www.apple.com" target="_blank">Apple</a> as Deep Learning Engineer.
-	<span class="right"><font color="#848482"><em>Jan</em> 02, 2019</font></span>
-</li>
-<li> <a href="https://hazirbas.com/projects/ddff/" target="_blank">DDFF</a> made its way to <a href="http://accv2018.net/" target="_blank">ACCV</a> in Perth, Australia.
-	<span class="right"><font color="#848482"><em>Sep</em> 26, 2018</font></span>
-</li>
-<li> Invited to give a talk at <a href="https://www.meetup.com/munichacm/events/251791247/" target="_blank">Machine Learning Meetup #1</a> event.
-	<span class="right"><font color="#848482"><em>May</em> 29, 2018</font></span>
-</li>
-<li> Visiting <a href="https://cs.adelaide.edu.au/~ianr/" target="_blank">Prof. Ian Reid</a>'s lab at <a href="https://blogs.adelaide.edu.au/acvt/ACVT" target="_blank">ACVT</a> in Australia for 2 months.
-	<span class="right"><font color="#848482"><em>February</em> 12, 2018</font></span>
-</li>
-<li> Our <a href="https://arxiv.org/abs/1611.07890" target="_blank">paper</a> featured on <a href="http://www.rsipvision.com/ICCV2017-Tuesday/#22" target="_blank">ICCV Daily</a> magazine.
-	<span class="right"><font color="#848482"><em>October</em> 22, 2017</font></span>
-</li>
-<li> Invited to <a href="https://www.dagstuhl.de/" target="_blank">Dagstuhl</a> on
-	<a href="https://www.dagstuhl.de/en/program/calendar/semhp/?semnr=17391" target="_blank">Deep Learning for Computer Vision</a>.
-	<span class="right"><font color="#848482"><em>September</em> 24, 2017</font></span>
-</li>
-<li>
-	<a href="http://hazirbas.com/datasets/ddff12scene/" target="_blank">DDFF 12-Scene Benchmark</a> is publicly available.
-	<span class="right"><font color="#848482"><em>September</em> 15, 2017</font></span>
-</li>
-<li>
-	ICCV 2017 papers are <a href="https://arxiv.org/abs/1611.07890" target="_blank">here</a>  and <a href="https://arxiv.org/abs/1704.03488" target="_blank">here</a> with cool results.
-	<span class="right"><font color="#848482"><em>July</em> 16, 2017</font></span>
-</li>
-<li>
-	I've been accepted to internship at <a href="https://www.disneyresearch.com/" target="_blank"><img src="assets/img/dr-zurich.jpg" alt="Disney Research Zurich" width="200"></a>.
-	<span class="right"><font color="#848482">
-	<em>April</em> 13, 2017</font>
-	</span>
-</li>
-<li>
-	<a href="http://munichacm.de/index.html" target="_blank">ACM Munich Student Chapter</a> founded. I am a charter member.
-	<span class="right"><font color="#848482"><em>June</em> 9, 2016</font></span>
-</li>
-<li>
-	Kyoto, here I am coming! Joining the <a href="http://www.i.kyoto-u.ac.jp/mlss15/" target="_blank">MLSS'15 Kyoto</a>.
-	<span class="right"><font color="#848482"><em>April</em> 24, 2015</font></span>
-</li>
-<li>
-	<a href="https://arxiv.org/abs/1504.06852" target="_blank">FlowNet</a> is accepted to ICCV 2015.
-	<span class="right"><font color="#848482"><em>September</em> 12, 2015</font></span>
-</li>
-<br>
-</ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caner Hazirbas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-<b>Talks</b>
-<div class="video">
-	<figure>
-		<iframe width="640" height="480" align="center"
-				src="//www.youtube.com/embed/qFV5VYVYtmM?list=PLjj5PRRQTrvk2iE5ImaTDh7FK1kE5yW23"
-				frameborder="2" allowfullscreen>
-		</iframe>
-	</figure>
+    :root {
+      --bg: #f4f3f0;
+      --card: #ffffff;
+      --border: #e2e0db;
+      --text: #18181a;
+      --body: #3f3e3b;
+      --muted: #9a9890;
+      --accent: #1a5e3f;
+      --accent2: #c8922a;
+      --tag-bg: #eef4f0;
+      --tag-text: #1a5e3f;
+    }
+
+    html { font-size: 16px; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Sora', sans-serif;
+      font-weight: 300;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 5rem 2.5rem 7rem;
+    }
+
+    /* fade in stagger */
+    [data-fade] { opacity: 0; transform: translateY(14px); animation: up 0.55s cubic-bezier(.22,.8,.36,1) forwards; }
+    [data-fade="1"] { animation-delay: 0.05s; }
+    [data-fade="2"] { animation-delay: 0.15s; }
+    [data-fade="3"] { animation-delay: 0.25s; }
+    [data-fade="4"] { animation-delay: 0.35s; }
+    [data-fade="5"] { animation-delay: 0.45s; }
+    @keyframes up { to { opacity: 1; transform: none; } }
+
+    /* ── HEADER ── */
+    header {
+      margin-bottom: 4.5rem;
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .name {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 3rem;
+      font-weight: 400;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+      color: var(--text);
+    }
+
+    .name .last { font-style: italic; color: var(--accent); }
+
+    .affil {
+      margin-top: 0.55rem;
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* social links vertical */
+    .social {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.45rem;
+      padding-top: 0.3rem;
+    }
+
+    .social a {
+      font-size: 0.68rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.15s;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .social a::after { content: '↗'; font-size: 0.55rem; opacity: 0.45; }
+    .social a:hover { color: var(--accent); }
+
+    /* divider line */
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin-bottom: 2rem;
+    }
+
+    .bio {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 1.05rem;
+      font-weight: 400;
+      color: var(--body);
+      line-height: 1.8;
+      max-width: 620px;
+    }
+
+    .bio a {
+      color: var(--text);
+      text-decoration-color: var(--border);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+      transition: color 0.15s, text-decoration-color 0.15s;
+    }
+    .bio a:hover { color: var(--accent); text-decoration-color: var(--accent); }
+
+    /* ── SECTION ── */
+    section { margin-bottom: 4rem; }
+
+    .sec-title {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .sec-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+    /* ── PROJECTS ── */
+    .projects {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.4rem 1.5rem 1.5rem;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .card:hover {
+      box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+      transform: translateY(-2px);
+    }
+
+    .card-tag {
+      display: inline-block;
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--tag-text);
+      background: var(--tag-bg);
+      border-radius: 4px;
+      padding: 0.18rem 0.5rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .card-title {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--text);
+      line-height: 1.25;
+      margin-bottom: 0.2rem;
+    }
+
+    .card-venue {
+      font-size: 0.68rem;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+    }
+
+    .card-desc {
+      font-size: 0.8rem;
+      font-weight: 300;
+      color: #5f5d58;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .card-links { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+    .chip {
+      font-size: 0.62rem;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      padding: 0.22rem 0.6rem;
+      border-radius: 20px;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      color: var(--body);
+      background: var(--bg);
+      transition: all 0.15s;
+      white-space: nowrap;
+    }
+    .chip:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .chip.main { background: var(--text); color: #fff; border-color: var(--text); }
+    .chip.main:hover { background: var(--accent); border-color: var(--accent); }
+
+    /* ── PUBLICATIONS ── */
+    .pub-list { list-style: none; }
+
+    .pub {
+      display: grid;
+      grid-template-columns: 6rem 1fr;
+      gap: 0 1.5rem;
+      padding: 1.1rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .pub:first-child { border-top: 1px solid var(--border); }
+
+    .pub-year {
+      font-size: 0.65rem;
+      font-weight: 400;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      padding-top: 0.15rem;
+      line-height: 1.5;
+    }
+
+    .pub-venue {
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent2);
+    }
+
+    .pub-title {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 0.975rem;
+      font-weight: 400;
+      color: var(--text);
+      line-height: 1.4;
+      margin-bottom: 0.25rem;
+    }
+
+    .pub-authors {
+      font-size: 0.73rem;
+      font-weight: 300;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+      line-height: 1.5;
+    }
+    .pub-authors em { font-style: normal; color: var(--body); font-weight: 400; }
+
+    .pub-chips { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+
+    /* ── NEWS ── */
+    .news-list { list-style: none; }
+
+    .news {
+      display: grid;
+      grid-template-columns: 6.5rem 1fr;
+      gap: 0 1rem;
+      padding: 0.65rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.83rem;
+    }
+    .news:first-child { border-top: 1px solid var(--border); }
+
+    .news-date {
+      font-size: 0.65rem;
+      font-weight: 400;
+      color: var(--muted);
+      padding-top: 0.05rem;
+      letter-spacing: 0.02em;
+    }
+
+    .news-text { color: var(--body); font-weight: 300; }
+    .news-text a {
+      color: var(--text);
+      text-decoration-color: var(--border);
+      text-underline-offset: 2px;
+      transition: color 0.15s, text-decoration-color 0.15s;
+    }
+    .news-text a:hover { color: var(--accent); text-decoration-color: var(--accent); }
+
+    /* ── FOOTER ── */
+    footer {
+      margin-top: 4rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.7rem;
+      font-weight: 300;
+      color: var(--muted);
+      letter-spacing: 0.03em;
+    }
+
+    footer a { color: var(--muted); text-decoration: none; transition: color 0.15s; }
+    footer a:hover { color: var(--accent); }
+
+    @media (max-width: 620px) {
+      .page { padding: 3rem 1.4rem 5rem; }
+      .name { font-size: 2.2rem; }
+      .header-top { flex-direction: column; gap: 1rem; }
+      .social { gap: 1rem; }
+      .projects { grid-template-columns: 1fr; }
+      .pub { grid-template-columns: 1fr; gap: 0.2rem; }
+      .news { grid-template-columns: 1fr; gap: 0.1rem; }
+      footer { flex-direction: column; gap: 0.4rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <header data-fade="1">
+    <div class="header-top">
+      <div>
+        <h1 class="name">Caner <span class="last">Hazirbas</span></h1>
+        <p class="affil">Research Scientist &nbsp;·&nbsp; Meta AI &nbsp;·&nbsp; On-Device ML &amp; GenAI</p>
+      </div>
+      <nav class="social">        <a href="https://scholar.google.com/citations?user=JEiXKpcAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Scholar</a>
+        <a href="https://github.com/hazirbas" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://linkedin.com/in/canerhazirbas" target="_blank" rel="noopener noreferrer">LinkedIn</a>        <a href="https://www.youtube.com/channel/UCDdqrM_Djhx8u1jd2q5Rklw" target="_blank" rel="noopener noreferrer">YouTube</a>
+      </nav>
+    </div>
+    <div class="divider"></div>
+    <p class="bio">
+      I am a Research Scientist at <a href="https://ai.meta.com" target="_blank" rel="noopener noreferrer">Meta AI</a> working on on-device ML and GenAI for photo and video edits.
+      Before that I was a Deep Learning Engineer at <a href="https://www.apple.com" target="_blank" rel="noopener noreferrer">Apple</a>,
+      and completed my PhD at <a href="https://www.tum.de" target="_blank" rel="noopener noreferrer">TU Munich</a>
+      in the group of <a href="https://vision.in.tum.de/members/cremers" target="_blank" rel="noopener noreferrer">Daniel Cremers</a>.
+      My research interests span depth estimation, RGB-D scene understanding, visual representation learning, responsible AI, and on-device machine learning.
+    </p>
+  </header>
+
+  <!-- Projects -->
+  <section data-fade="2">
+    <h2 class="sec-title">Datasets</h2>
+    <div class="projects">
+
+      <div class="card">
+        <span class="card-tag">Responsible AI</span>
+        <h3 class="card-title">Casual Conversations v1</h3>
+        <p class="card-venue">Meta AI · 2021</p>
+        <p class="card-desc">A dataset of 45,186 videos featuring paid participants to help researchers evaluate AI models for fairness across age, gender, and skin tone attributes.</p>
+        <div class="card-links">
+          <a class="chip main" href="https://ai.meta.com/blog/shedding-light-on-fairness-in-ai-with-a-new-data-set/" target="_blank" rel="noopener noreferrer">Blog</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="card-tag">Responsible AI</span>
+        <h3 class="card-title">Casual Conversations v2</h3>
+        <p class="card-venue">Meta AI · 2023</p>
+        <p class="card-desc">An expanded dataset with 26,467 videos covering additional fairness dimensions including perceived age, gender, physical attributes, and self-reported annotations for more robust AI evaluation.</p>
+        <div class="card-links">
+          <a class="chip main" href="https://ai.meta.com/blog/casual-conversations-v2-dataset-measure-fairness/" target="_blank" rel="noopener noreferrer">Blog</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="card-tag">Focal Stack</span>
+        <h3 class="card-title">DDFF 12-Scene</h3>
+        <p class="card-venue">Benchmark · 2017</p>
+        <p class="card-desc">Large-scale focal stack benchmark with 12 indoor scenes and dense depth ground truth — 25× larger than prior benchmarks, enabling ML-based depth-from-focus research.</p>
+        <div class="card-links">
+          <a class="chip main" href="https://cvg.cit.tum.de/data/datasets/ddff12scene" target="_blank" rel="noopener noreferrer">Dataset</a>
+          <a class="chip" href="https://github.com/hazirbas/ddff-toolbox" target="_blank" rel="noopener noreferrer">Toolbox</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="card-tag">RGB-D</span>
+        <h3 class="card-title">TUM-LSI</h3>
+        <p class="card-venue">TU Munich</p>
+        <p class="card-desc">Large-scale indoor RGB-D dataset for scene understanding and semantic segmentation research, captured across real-world environments at TU Munich.</p>
+        <div class="card-links">
+          <a class="chip main" href="https://cvg.cit.tum.de/data/datasets/tum-lsi" target="_blank" rel="noopener noreferrer">Dataset</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Publications -->
+  <section data-fade="3">
+    <h2 class="sec-title">
+      Publications
+      <a class="chip" href="https://scholar.google.com/citations?user=JEiXKpcAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" style="font-size:0.6rem;">All on Scholar</a>
+    </h2>
+    <ul class="pub-list">
+
+      <li class="pub">
+        <div>
+          <p class="pub-year">2018</p>
+          <p class="pub-venue">ACCV</p>
+        </div>
+        <div>
+          <p class="pub-title">Deep Depth From Focus</p>
+          <p class="pub-authors"><em>C. Hazirbas</em>, S. G. Soyer, M. C. Staab, L. Leal-Taixé, D. Cremers</p>
+          <div class="pub-chips">
+            <a class="chip" href="https://arxiv.org/abs/1704.01085" target="_blank" rel="noopener noreferrer">arXiv</a>
+            <a class="chip" href="https://github.com/soyers/ddff-pytorch" target="_blank" rel="noopener noreferrer">Code</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="pub">
+        <div>
+          <p class="pub-year">2017</p>
+          <p class="pub-venue">ICCV</p>
+        </div>
+        <div>
+          <p class="pub-title">Image-based Localization Using LSTMs for Structured Feature Correlation</p>
+          <p class="pub-authors">F. Walch, <em>C. Hazirbas</em>, L. Leal-Taixé, T. Sattler, S. Hilsenbeck, D. Cremers</p>
+          <div class="pub-chips">
+            <a class="chip" href="https://arxiv.org/abs/1611.07890" target="_blank" rel="noopener noreferrer">arXiv</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="pub">
+        <div>
+          <p class="pub-year">2017</p>
+          <p class="pub-venue">ICCV</p>
+        </div>
+        <div>
+          <p class="pub-title">Learning Proximal Operators: Using Denoising Networks for Regularizing Inverse Imaging Problems</p>
+          <p class="pub-authors">T. Meinhardt, M. Moller, <em>C. Hazirbas</em>, D. Cremers</p>
+          <div class="pub-chips">
+            <a class="chip" href="https://arxiv.org/abs/1704.03488" target="_blank" rel="noopener noreferrer">arXiv</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="pub">
+        <div>
+          <p class="pub-year">2016</p>
+          <p class="pub-venue">ACCV</p>
+        </div>
+        <div>
+          <p class="pub-title">FuseNet: Incorporating Depth into Semantic Segmentation via Fusion-based CNN Architecture</p>
+          <p class="pub-authors"><em>C. Hazirbas</em>†, L. Ma†, C. Domokos, D. Cremers</p>
+          <div class="pub-chips">
+            <a class="chip" href="https://vision.in.tum.de/_media/spezial/bib/hazirbasma2016fusenet.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
+            <a class="chip" href="https://github.com/MehmetAygun/fusenet-pytorch" target="_blank" rel="noopener noreferrer">Code</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="pub">
+        <div>
+          <p class="pub-year">2015</p>
+          <p class="pub-venue">ICCV</p>
+        </div>
+        <div>
+          <p class="pub-title">FlowNet: Learning Optical Flow with Convolutional Networks</p>
+          <p class="pub-authors">A. Dosovitskiy, P. Fischer, E. Ilg, P. Häusser, <em>C. Hazirbas</em>, et al.</p>
+          <div class="pub-chips">
+            <a class="chip" href="https://arxiv.org/abs/1504.06852" target="_blank" rel="noopener noreferrer">arXiv</a>
+          </div>
+        </div>
+      </li>
+
+    </ul>
+  </section>
+
+  <!-- News -->
+  <section data-fade="4">
+    <h2 class="sec-title">News</h2>
+    <ul class="news-list">
+      <li class="news">
+        <span class="news-date">Aug 2020</span>
+        <span class="news-text">Joined <a href="https://ai.meta.com" target="_blank" rel="noopener noreferrer">Meta AI</a> as Research Scientist.</span>
+      </li>
+      <li class="news">
+        <span class="news-date">Jan 2019</span>
+        <span class="news-text">Joined <a href="https://www.apple.com" target="_blank" rel="noopener noreferrer">Apple</a> as Deep Learning Engineer.</span>
+      </li>
+      <li class="news">
+        <span class="news-date">Sep 2018</span>
+        <span class="news-text"><a href="https://hazirbas.com/projects/ddff/" target="_blank" rel="noopener noreferrer">DDFF</a> accepted to <a href="https://www.accv2018.net/" target="_blank" rel="noopener noreferrer">ACCV 2018</a>, Perth, Australia.</span>
+      </li>
+      <li class="news">
+        <span class="news-date">Jul 2018</span>
+        <span class="news-text">Talk at ACM Munich ML Meetup #1 — <em>Delving Deep into Computer Vision</em>. <a href="https://hazirbas.com/slides/delving_deep_into_computer_vision.pdf" target="_blank" rel="noopener noreferrer">Slides</a></span>
+      </li>
+      <li class="news">
+        <span class="news-date">May 2018</span>
+        <span class="news-text">Invited talk at ML Meetup #1, Munich.</span>
+      </li>
+      <li class="news">
+        <span class="news-date">Feb 2018</span>
+        <span class="news-text">Visiting <a href="https://cs.adelaide.edu.au/~ianr/" target="_blank" rel="noopener noreferrer">Prof. Ian Reid</a>'s lab at ACVT, University of Adelaide.</span>
+      </li>
+      <li class="news">
+        <span class="news-date">Oct 2017</span>
+        <span class="news-text"><a href="https://arxiv.org/abs/1611.07890" target="_blank" rel="noopener noreferrer">ICCV paper</a> featured in ICCV Daily.</span>
+      </li>
+      <li class="news">
+        <span class="news-date">Sep 2017</span>
+        <span class="news-text">Two papers at ICCV 2017. <a href="https://cvg.cit.tum.de/data/datasets/ddff12scene" target="_blank" rel="noopener noreferrer">DDFF 12-Scene Benchmark</a> released publicly.</span>
+      </li>
+      <li class="news">
+        <span class="news-date">Apr 2017</span>
+        <span class="news-text">Research internship at <a href="https://www.disneyresearch.com/" target="_blank" rel="noopener noreferrer">Disney Research Zurich</a>.</span>
+      </li>
+      <li class="news">
+        <span class="news-date">Jul 2016</span>
+        <span class="news-text">Talk at <a href="https://is.tuebingen.mpg.de/events/cls-workshop-deep-learning-theory-and-practice" target="_blank" rel="noopener noreferrer">DL Workshop, MPI-ETH</a> — <em>FlowNet</em>.</span>
+      </li>
+      <li class="news">
+        <span class="news-date">Nov 2015</span>
+        <span class="news-text">Talk at CIS @LMU — <em>CNNs for Computer Vision</em>.</span>
+      </li>
+      <li class="news">
+        <span class="news-date">Sep 2015</span>
+        <span class="news-text"><a href="https://arxiv.org/abs/1504.06852" target="_blank" rel="noopener noreferrer">FlowNet</a> accepted to ICCV 2015. Talk at MLSS'15 Kyoto.</span>
+      </li>
+      <li class="news">
+        <span class="news-date">Jul 2015</span>
+        <span class="news-text">Talk at <a href="https://pizzaseminar.speicherleck.de/index-4.html" target="_blank" rel="noopener noreferrer">Kleine Bayessche AG, Augsburg</a> — <em>CNNs for Computer Vision</em>. <a href="https://hazirbas.com/slides/cnnsforcv.pdf" target="_blank" rel="noopener noreferrer">Slides</a></span>
+      </li>
+      <li class="news">
+        <span class="news-date">Jun 2015</span>
+        <span class="news-text">Talk at ACM Munich Tech Talk — <em>Deep Learning in Action</em>. <a href="https://hazirbas.com/slides/deep_learning_in_computer_vision.pdf" target="_blank" rel="noopener noreferrer">Slides</a></span>
+      </li>
+    </ul>
+  </section>
+
+  <footer data-fade="5">
+    <span>Caner Hazirbas &middot; 2025</span>
+  </footer>
+
 </div>
+</body>
+</html>
