@@ -20,7 +20,7 @@ Single `index.html` file. No frameworks, no build step, no dependencies beyond t
 Open `index.html` in any text editor. Sections are clearly commented:
 
 - `<!-- Header -->` — name, role, bio, social links
-- `<!-- Datasets -->` — project/dataset cards
+- `<!-- Datasets -->` — dataset cards
 - `<!-- Publications -->` — paper list
 - `<!-- News -->` — news and talks
 
